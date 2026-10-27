@@ -1,36 +1,70 @@
+[**Create your rent receipt →**](https://madras-forge.github.io/rent-receipt-generator-india/)  https://madras-forge.github.io/rent-receipt-generator-india/
+
 # Rent Receipt Generator – India
 
-A free, browser-based tool for creating Indian rent receipts. Fill in the details, review the live preview, and print or save as PDF.
+Create Indian rent receipts with a live preview and print or save them as PDF.
+
+## Why this tool exists
+
+Millions of Indian salaried tenants need rent receipts every year for HRA claims. Most existing tools are ad-heavy, ask for sign-ups, or upload your data. This tool is free, private, and runs in the browser.
 
 ## Features
 
-- Tenant, landlord and rental property details
-- Indian rupee formatting and amounts in words
-- UPI, bank transfer, cash and cheque payment options
-- Automatic PAN suggestions with an annual-rent override and opt-out
-- PAN structure checks
-- Landlord signature line and optional revenue-stamp space
-- Next-month receipt generation
-- Mobile-friendly layout
-- Source-linked guidance for selected states
+- Indian currency formatting and amounts in words
+- UPI, bank transfer, cash and cheque payments
+- PAN format checks, automatic suggestions and opt-out
+- Signature line, optional stamp space and next-month receipts
 
-## Privacy
+## Screenshot
 
-Receipt details stay in the browser’s memory. The app does not upload form details or save drafts. Refreshing or closing the page clears them.
+![Rent receipt form and completed sample receipt](docs/screenshot.png)
+
+## Run locally
+
+1. Download or clone the repository.
+2. Open `index.html` in a browser (`dist/index.html` in the authoring checkout).
+
+No installation, server or build step is needed.
 
 ## Usage
 
-1. Enter the names, property address and payment details.
-2. Review the PAN suggestion and complete any required fields.
-3. Check the receipt preview.
-4. Select **Print / Save PDF**, then choose your printer or **Save as PDF**.
+1. Enter the tenant, landlord, property and payment details.
+2. Review the PAN suggestion and receipt preview.
+3. Complete required fields, then select **Print / Save PDF**.
 
-## Hosting on GitHub Pages
+## Tax and PAN guidance
 
-Keep `index.html`, `style.css` and `app.js` at the repository’s top level.
+**Last verified: 2026-10-28**
 
-In **Settings → Pages**, select **Deploy from a branch**, choose **main** and **/ (root)**, then save.
+- For employer/HRA documentation, landlord PAN is required when actual annual rent exceeds ₹1,00,000. [Official guidance](https://www.incometaxindia.gov.in/documents/d/guest/form-124-faqs)
+- The automatic suggestion uses rent × 12. Adjust the annual total if needed; opting out does not waive employer requirements.
+- PAN checks cover structure only, not issuance, the final check letter or ownership. [PAN structure guidance](https://www.incometaxindia.gov.in/documents/d/guest/1-permanent-account-number-pan-pdf)
 
-## Important limitations
+## Privacy
 
-PAN checks validate structure only—not issuance, ownership or the final check letter. State-specific research is incomplete. This general receipt does not certify legal compliance, replace a prescribed form, or pay stamp duty.
+Form details stay in the page's memory. No uploads, analytics or saved drafts. Refreshing or closing the page clears the form. Keep real personal data out of screenshots, issues and pull requests.
+
+## Hosting
+
+Upload `index.html`, `style.css` and `app.js` to the GitHub repository root.
+
+Under **Settings → Pages**, choose **Deploy from a branch → main → / (root)** and save.
+
+## Contributing
+
+First-time contributors are welcome. Open an issue or submit a focused pull request describing your change and how you checked it. Include official sources for changes to tax or state guidance.
+
+## Roadmap
+
+- Expand verified state-specific guidance
+- Generate receipts for multiple months
+- Improve accessibility and add Indian-language interfaces
+
+## Limitations
+
+- State-specific guidance is incomplete; check applicable requirements.
+- The tool does not verify payments, identities or signatures, or calculate HRA eligibility.
+- A stamp box is only a placeholder and does not pay stamp duty.
+- Review the PDF or print preview before use.
+
+**Disclaimer:** This is a general receipt, not legal or tax advice or a prescribed statutory form.
